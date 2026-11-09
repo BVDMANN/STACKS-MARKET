@@ -408,7 +408,7 @@
       html += '<div class="cat-group"><h3 class="cat-title">' + c.title + (c.note ? ' <span>' + c.note + '</span>' : '') + '</h3><div class="products">' +
         items.map(function(p){
           return '<article class="product">' +
-            '<img class="product-img" src="assets/products/' + p.id + '.jpg" alt="' + p.name + '" loading="lazy">' +
+            '<img class="product-img" src="assets/products/' + p.id + '.jpg" alt="' + p.name + '" width="640" height="480" loading="eager" decoding="async" fetchpriority="high">' +
             '<h3>' + p.name + '</h3>' +
             '<span class="price">' + fmt(p.price) + '</span>' +
             '</article>';
